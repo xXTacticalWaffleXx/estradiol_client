@@ -4,7 +4,8 @@ register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]
 
 let ash_counter = 0;
 
-  register("chat",(event)=>{
+register("chat",(event)=>{
+  if (ash_counter){
     let umsg = ChatLib.removeFormatting(ChatLib.getChatMessage(event))
     if (umsg.includes("ASHFANG DOWN!")){
       ash_counter++;
@@ -12,8 +13,8 @@ let ash_counter = 0;
     else if (umsg.includes("BLADESOUL DOWN")){
       ash_counter = 0;
     }
-    // if (ash_counter > 4){
-    //   chat("RESET");
-    // }
-    ChatLib.chat(ash_counter);
-  })
+    if (ash_counter > 3){
+     chat("RESET");
+    }
+  }
+})
