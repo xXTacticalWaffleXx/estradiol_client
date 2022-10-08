@@ -15,5 +15,5 @@ let ash_counter = 0;
     // if (ash_counter > 4){
     //   chat("RESET");
     // }
-    chat(ash_counter);
+    ChatLib.chat(ash_counter);
   })
