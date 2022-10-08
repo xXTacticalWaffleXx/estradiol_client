@@ -13,6 +13,8 @@ register("chat",event=>{
 
       if (ash_counter > 3){
         ChatLib.chat("RESET");
+        // send message to party telling them how many bosses out of 4
+        // if 4/4 send message saying "4/4 RESET"
       }
     }
     else if (umsg.includes("BLADESOUL DOWN")){
