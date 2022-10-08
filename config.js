@@ -9,7 +9,7 @@ Color,
 @TextProperty,
 @Vigilant,
 } from 'Vigilance';
-@Vigilant("namehere")
+@Vigilant("estradiol")
 class Settings {
     @SwitchProperty({
         name: "Ashfang counter",
