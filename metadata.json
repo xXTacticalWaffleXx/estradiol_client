@@ -1,0 +1,8 @@
+{
+    "name": "estradiol",
+    "author": "tactical waffle#1560",
+    "description": "some useful bits of code",
+    "entry": "index.js",
+    "version": "alpha 0.1",
+    "requires": []
+}
