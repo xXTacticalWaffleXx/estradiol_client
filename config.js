@@ -23,7 +23,7 @@ class Settings {
         description: "logs debug info to chat",
         category: "General",
     })
-    debug = true;
+    debug = false;
 
     constructor() {
         this.initialize(this);
