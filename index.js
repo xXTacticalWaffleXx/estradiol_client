@@ -4,8 +4,8 @@ let ash_counter = 0;
 
 register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]);
 
-register("chat",(event)=>{
-  if (ash_counter){
+register("chat",event=>{
+  if (Settings.ash_counter_toggle){
     let umsg = ChatLib.removeFormatting(ChatLib.getChatMessage(event))
     if (umsg.includes("ASHFANG DOWN!")){
       ash_counter++;
