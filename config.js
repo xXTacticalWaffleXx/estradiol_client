@@ -16,7 +16,7 @@ class Settings {
         description: "tells you how many ashfangs until you need to reset",
         category: "General",
     })
-    ash_counter = true;
+    ash_counter_toggle = true;
 
     constructor() {
         this.initialize(this);
