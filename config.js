@@ -17,6 +17,13 @@ class Settings {
         category: "General",
     })
     ash_counter_toggle = true;
+    
+    @SwitchProperty({
+        name: "Debug",
+        description: "logs debug info to chat",
+        category: "General",
+    })
+    debug = true;
 
     constructor() {
         this.initialize(this);

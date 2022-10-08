@@ -9,14 +9,15 @@ register("chat",event=>{
     let umsg = ChatLib.removeFormatting(ChatLib.getChatMessage(event))
     if (umsg.includes("ASHFANG DOWN!")){
       ash_counter++;
-      ChatLib.chat("ashfang");
+      if (Settings.debug){ ChatLib.chat("[Debug] ashfang registered"); }
+
+      if (ash_counter > 3){
+        ChatLib.chat("RESET");
+      }
     }
     else if (umsg.includes("BLADESOUL DOWN")){
       ash_counter = 0;
-      ChatLib.chat("reset")
-    }
-    if (ash_counter > 3){
-     ChatLib.chat("RESET");
+      if (Settings.debug){ ChatLib.chat("[Debug] reset") }
     }
   }
 })
