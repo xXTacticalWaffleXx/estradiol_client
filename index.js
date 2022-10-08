@@ -1,8 +1,9 @@
 import Settings from './config.js'
 
-register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]);
-
 let ash_counter = 0;
+
+register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]);
+register("command", ChatLib.chat(ash_counter)).setName("ash");
 
 register("chat",(event)=>{
   if (ash_counter){
