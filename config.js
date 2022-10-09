@@ -24,6 +24,13 @@ class Settings {
         category: "General",
     })
     debug = false;
+    
+    @SwitchProperty({
+        name: "Party chat messages",
+        description: "automatically tell your party how long until you need to reset",
+        category: "General",
+    })
+    pchat_messages = false;
 
     constructor() {
         this.initialize(this);

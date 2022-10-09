@@ -13,9 +13,9 @@ register("chat",event=>{
 
       if (ash_counter > 3){
         ChatLib.chat("RESET");
-        // send message to party telling them how many bosses out of 4
-        // if 4/4 send message saying "4/4 RESET"
+        if (Settings.pchat_messages){ ChatLib.command("pc " + ash_counter + "/4"); }
       }
+      else { if (Settings.pchat_messages) {ChatLib.command("pc 4/4 reset"); }}
     }
     else if (umsg.includes("BLADESOUL DOWN")){
       ash_counter = 0;
