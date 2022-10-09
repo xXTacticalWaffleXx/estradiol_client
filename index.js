@@ -19,9 +19,9 @@ register("chat",event=>{
 
       if (ash_counter > 3){
         ChatLib.chat("RESET");
-        if (Settings.pchat_messages){ ChatLib.command("pc " + ash_counter + "/4"); }
-      }
       else { if (Settings.pchat_messages) {ChatLib.command("pc 4/4 reset"); }}
+      }
+        if (Settings.pchat_messages){ ChatLib.command("pc " + ash_counter + "/4"); }
     }
     else if (umsg.includes("BLADESOUL DOWN")){
       // prevent frauds on the system
