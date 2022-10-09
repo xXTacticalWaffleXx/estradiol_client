@@ -15,7 +15,7 @@ Color,
 class Settings {
     @SwitchProperty({
         name: "Ashfang counter",
-        description: "tells you how many ashfangs until you need to reset",
+        description: "Tells you how many ashfangs until you need to reset.",
         category: "General",
         subcategory: "Ashfang",
     })
@@ -23,7 +23,7 @@ class Settings {
     
     @SwitchProperty({
         name: "Debug",
-        description: "logs debug info to chat",
+        description: "Logs debug info to chat.",
         category: "General",
         subcategory: "Ashfang",
     })
@@ -31,7 +31,7 @@ class Settings {
     
     @SwitchProperty({
         name: "Party chat messages",
-        description: "automatically tell your party how long until you need to reset",
+        description: "Automatically tell your party how long until you need to reset.",
         category: "General",
         subcategory: "Ashfang",
     })
