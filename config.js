@@ -17,6 +17,7 @@ class Settings {
         name: "Ashfang counter",
         description: "tells you how many ashfangs until you need to reset",
         category: "General",
+        subcategory: "Ashfang",
     })
     ash_counter_toggle = true;
     
@@ -24,6 +25,7 @@ class Settings {
         name: "Debug",
         description: "logs debug info to chat",
         category: "General",
+        subcategory: "Ashfang",
     })
     debug = false;
     
@@ -31,6 +33,7 @@ class Settings {
         name: "Party chat messages",
         description: "automatically tell your party how long until you need to reset",
         category: "General",
+        subcategory: "Ashfang",
     })
     pchat_messages = false;
 
