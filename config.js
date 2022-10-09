@@ -1,3 +1,5 @@
+//author: luna aphelion <luna-aphelion@proton.me>
+
 import {
 @ButtonProperty,
 @CheckboxProperty,

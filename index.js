@@ -1,3 +1,5 @@
+//author: luna aphelion <luna-aphelion@proton.me>
+
 import Settings from './config.js'
 
 let ash_counter = 0;
