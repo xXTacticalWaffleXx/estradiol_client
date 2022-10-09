@@ -5,6 +5,7 @@ import Settings from './config.js'
 let ash_counter = 0;
 
 register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]);
+//todo: add a command to arbitrarily set the ashfang counter and to check the counter
 
 register("chat",event=>{
   if (Settings.ash_counter_toggle){
