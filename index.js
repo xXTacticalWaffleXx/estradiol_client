@@ -12,8 +12,6 @@ register("command", ()=> {
   ChatLib.chat(ash_counter);
 }).setName("ashcheck"); 
 
-//todo: add a command to arbitrarily set the ashfang counter and to check the counter
-
 register("chat",event=>{
   if (Settings.ash_counter_toggle){
     let umsg = ChatLib.removeFormatting(ChatLib.getChatMessage(event))
@@ -26,7 +24,7 @@ register("chat",event=>{
 
     if (umsg.includes("ASHFANG DOWN!")){
       ash_counter++;
-      if (Settings.debug){ ChatLib.chat("[Debug] ashfang registered"); } // todo: tell me howmany done
+      if (Settings.debug){ ChatLib.chat("[Debug] ashfang registered counter: " + ash_counter); } // todo: tell me howmany done
       if (ash_counter > 3){
         //ChatLib.chat("RESET");
         Client.showTitle("RESET", "", 0, 15, 0);
