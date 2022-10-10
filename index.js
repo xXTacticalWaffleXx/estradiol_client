@@ -42,7 +42,9 @@ register("renderOverlay", petDisplay);
 
 function petDisplay() {
   if (Settings.pet_display){
-    Renderer.drawCircle(Renderer.RED, PetDisplayX, PetDisplayY, 25, 90, 5);
-    Renderer.drawCircle(Renderer.color(69, 69, 69, 0), PetDisplayX, PetDisplayY, 25, 90, 5);
+    if (inSkyblock){
+      Renderer.drawCircle(Renderer.RED, PetDisplayX, PetDisplayY, 25, 90, 5);
+      Renderer.drawCircle(Renderer.color(69, 69, 69, 0), PetDisplayX, PetDisplayY, 25, 90, 5);
+    }
   }
 }
