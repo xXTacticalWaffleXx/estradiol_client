@@ -24,7 +24,7 @@ register("chat",event=>{
 
     if (umsg.includes("ASHFANG DOWN!")){
       ash_counter++;
-      if (Settings.debug){ ChatLib.chat("[Debug] ashfang registered counter: " + ash_counter); } // todo: tell me howmany done
+      if (Settings.debug){ ChatLib.chat("[Debug] ashfang registered counter: " + ash_counter); }
       if (ash_counter > 3){
         //ChatLib.chat("RESET");
         Client.showTitle("RESET", "", 0, 15, 0);
