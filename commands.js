@@ -1,3 +1,5 @@
+import Settings from './config.js'
+
 export default function registerCommands() {
   register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]);
 
@@ -11,5 +13,5 @@ export default function registerCommands() {
 
   register("command", ()=> {
     inSkyblock();
-  }).setName("sbtest");
+}).setName("sbtest");
 }
