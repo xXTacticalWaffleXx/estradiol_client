@@ -11,7 +11,12 @@ Color,
 @TextProperty,
 @Vigilant,
 } from 'Vigilance';
-@Vigilant("estradiol", "Estradiol clien\'t")
+@Vigilant("estradiol", "Estradiol clien\'t", {
+    getCategoryComparator: () => (a, b) => {
+        const categories = ['General', 'Debug'];
+        return categories.indexOf(a.name) - categories.indexOf(b.name);
+    }
+})
 class Settings {
     @SwitchProperty({
         name: "Ashfang counter",
