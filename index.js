@@ -10,10 +10,10 @@ register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]
 register("chat",event=>{
   if (Settings.ash_counter_toggle){
     let umsg = ChatLib.removeFormatting(ChatLib.getChatMessage(event))
+      //prevent frauds on the system
+      //if (umsg.includes("Party")) return
+      //if (umsg.includes("[")) return
     if (umsg.includes("ASHFANG DOWN!")){
-      // prevent frauds on the system
-//      if (umsg.includes("Party")) return
-//      if (umsg.includes("[")) return
       ash_counter++;
       if (Settings.debug){ ChatLib.chat("[Debug] ashfang registered"); } // todo: tell me howmany done
 
@@ -24,10 +24,8 @@ register("chat",event=>{
         if (Settings.pchat_messages){ ChatLib.command("pc " + ash_counter + "/4"); }
       }
     }
-    else if (umsg.includes("BLADESOUL DOWN")){
+    else if (umsg.includes("BLADESOUL DOWN!")){
       // prevent frauds on the system
-      if (umsg.includes("Party")) return
-      if (umsg.includes("[")) return
       ash_counter = 0;
       if (Settings.debug){ ChatLib.chat("[Debug] reset") }
     }
