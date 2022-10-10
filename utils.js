@@ -1,3 +1,3 @@
-export default function inSkyblock() {
+export function inSkyblock() {
   ChatLib.chat("dingus");
 }

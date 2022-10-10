@@ -10,8 +10,4 @@ export default function registerCommands() {
   register("command", ()=> {
     ash_counter = 0;
   }).setName("ashreset");
-
-  register("command", ()=> {
-    inSkyblock();
-}).setName("sbtest");
 }
