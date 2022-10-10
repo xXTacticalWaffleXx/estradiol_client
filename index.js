@@ -8,6 +8,9 @@ register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]
 /*register("command", ()=> {
   Client.showTitle("RESET", "", 0, 15, 0);
 }).setName("titletest"); */
+register("command", ()=> {
+  ChatLib.chat(ash_counter);
+}).setName("ashcheck"); 
 
 //todo: add a command to arbitrarily set the ashfang counter and to check the counter
 
