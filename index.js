@@ -1,6 +1,7 @@
 //author: luna aphelion <luna-aphelion@proton.me>
 
 import Settings from './config.js'
+import inSkyblock from './utils.js'
 
 let ash_counter = 0;
 
@@ -13,6 +14,10 @@ register("command", ()=> {
 register("command", ()=> {
   ash_counter = 0;
 }).setName("ashreset");
+
+register("command", ()=> {
+  inSkyblock();
+}).setName("sbtest");
 
 register("chat",event=>{
   if (Settings.ash_counter_toggle){
@@ -40,3 +45,15 @@ register("chat",event=>{
     }
   }
 })
+
+var PetDisplayX = 930
+var PetDisplayY = 30
+
+register("renderOverlay", petDisplay);
+
+function petDisplay() {
+  if (Settings.pet_display){
+    Renderer.drawCircle(Renderer.RED, PetDisplayX, PetDisplayY, 25, 90, 5);
+    Renderer.drawCircle(Renderer.color(69, 69, 69, 0), PetDisplayX, PetDisplayY, 25, 90, 5);
+  }
+}

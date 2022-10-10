@@ -13,11 +13,12 @@ Color,
 } from 'Vigilance';
 @Vigilant("estradiol", "Estradiol clien\'t", {
     getCategoryComparator: () => (a, b) => {
-        const categories = ['General', 'Debug'];
+        const categories = ['General', 'Pets', 'Debug'];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     }
 })
 class Settings {
+    // General
     @SwitchProperty({
         name: "Ashfang counter",
         description: "Tells you how many ashfangs until you need to reset.",
@@ -33,7 +34,15 @@ class Settings {
         subcategory: "Ashfang",
     })
     pchat_messages = false;
-    
+    // Pets
+    @SwitchProperty({
+        name: "Pet display",
+        description: "Shows what pet you are using VERY WIP DONT USE XD.",
+        category: "Pets",
+        subcategory: "Pet display",
+    })
+    pet_display = false;
+    // Debug
     @SwitchProperty({
         name: "Debug",
         description: "Logs debug info to chat.",
