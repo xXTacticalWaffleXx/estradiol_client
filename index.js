@@ -2,22 +2,11 @@
 
 import Settings from './config.js'
 import inSkyblock from './utils.js'
+import registerCommands from './commands.js'
+
+registerCommands();
 
 let ash_counter = 0;
-
-register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]);
-
-register("command", ()=> {
-  ChatLib.chat(ash_counter);
-}).setName("ashcheck");
-
-register("command", ()=> {
-  ash_counter = 0;
-}).setName("ashreset");
-
-register("command", ()=> {
-  inSkyblock();
-}).setName("sbtest");
 
 register("chat",event=>{
   if (Settings.ash_counter_toggle){
