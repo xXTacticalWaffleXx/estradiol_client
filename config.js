@@ -42,8 +42,8 @@ class Settings {
     debug = false;
 
     @SwitchProperty({
-        name: "Party chat messages",
-        description: "Automatically tell your party how long until you need to reset.",
+        name: "Anti player sent messages",
+        description: "Check if an ashfang or bladesoul message was sent by a player.",
         category: "Debug",
     })
     party_msg_check = true;
