@@ -22,20 +22,26 @@ class Settings {
     ash_counter_toggle = true;
     
     @SwitchProperty({
-        name: "Debug",
-        description: "Logs debug info to chat.",
-        category: "General",
-        subcategory: "Ashfang",
-    })
-    debug = false;
-    
-    @SwitchProperty({
         name: "Party chat messages",
         description: "Automatically tell your party how long until you need to reset.",
         category: "General",
         subcategory: "Ashfang",
     })
     pchat_messages = false;
+    
+    @SwitchProperty({
+        name: "Debug",
+        description: "Logs debug info to chat.",
+        category: "Debug",
+    })
+    debug_chat_log = false;
+
+    @SwitchProperty({
+        name: "Party chat messages",
+        description: "Automatically tell your party how long until you need to reset.",
+        category: "Debug",
+    })
+    party_msg_check = true;
 
     constructor() {
         this.initialize(this);
