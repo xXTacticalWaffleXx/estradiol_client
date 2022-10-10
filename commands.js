@@ -1,4 +1,5 @@
 import Settings from './config.js'
+import {inSkyblock} from './utils.js'
 
 export default function registerCommands() {
   register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]);
@@ -12,6 +13,6 @@ export default function registerCommands() {
   }).setName("ashreset");
 
   register("command", ()=> {
-    inSkyblock();
+    ChatLib.chat(inSkyblock());
   }).setName("sbtest");
 }
