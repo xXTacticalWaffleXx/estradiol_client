@@ -5,12 +5,14 @@ import Settings from './config.js'
 let ash_counter = 0;
 
 register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny"]);
-/*register("command", ()=> {
-  Client.showTitle("RESET", "", 0, 15, 0);
-}).setName("titletest"); */
+
 register("command", ()=> {
   ChatLib.chat(ash_counter);
-}).setName("ashcheck"); 
+}).setName("ashcheck");
+
+register("command", ()=> {
+  ash_counter = 0;
+}).setName("ashreset");
 
 register("chat",event=>{
   if (Settings.ash_counter_toggle){
@@ -33,7 +35,6 @@ register("chat",event=>{
         if (Settings.pchat_messages){ ChatLib.command("pc " + ash_counter + "/4"); }
       }
     } else if (umsg.includes("BLADESOUL DOWN!")){
-      // prevent frauds on the system
       ash_counter = 0;
       if (Settings.debug){ ChatLib.chat("[Debug] reset") }
     }
