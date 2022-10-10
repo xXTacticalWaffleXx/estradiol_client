@@ -10,7 +10,7 @@ Color,
 @SwitchProperty,
 @TextProperty,
 @Vigilant,
-} from 'Vigilance';
+} from 'Vigilance', 'Estradiol clien't';
 @Vigilant("estradiol")
 class Settings {
     @SwitchProperty({
