@@ -10,8 +10,8 @@ Color,
 @SwitchProperty,
 @TextProperty,
 @Vigilant,
-} from 'Vigilance', 'Estradiol clien\'t';
-@Vigilant("estradiol")
+} from 'Vigilance';
+@Vigilant("estradiol", "Estradiol clien\'t")
 class Settings {
     @SwitchProperty({
         name: "Ashfang counter",
@@ -34,7 +34,7 @@ class Settings {
         description: "Logs debug info to chat.",
         category: "Debug",
     })
-    debug_chat_log = false;
+    debug = false;
 
     @SwitchProperty({
         name: "Party chat messages",
