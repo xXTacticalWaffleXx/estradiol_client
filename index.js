@@ -39,13 +39,18 @@ var PetDisplayX = 930
 var PetDisplayY = 30
 
 register("renderOverlay", petDisplay);
+register("chat",event=>{
+  let umsg = ChatLib.removeFormatting(ChatLib.getChatMessage(event));
 
+  if (!umsg.includes("You despawned your") && !umsg.includes("You summoned your")) return
+
+  ChatLib.chat("pet change");
+
+})
 function petDisplay() {
   if (Settings.pet_display){
     if (inSkyblock()){
-      ChatLib.chat("dingus");
       Renderer.drawCircle(Renderer.RED, PetDisplayX, PetDisplayY, 25, 90, 5);
-      Renderer.drawCircle(Renderer.color(69, 69, 69, 0), PetDisplayX, PetDisplayY, 25, 90, 5);
     }
   }
 }
