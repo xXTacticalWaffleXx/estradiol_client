@@ -61,7 +61,7 @@ function renderPetDisplay() {
           Renderer.drawCircle(Renderer.LIGHT_PURPLE, PetDisplayX, PetDisplayY, 25, 90, 5);
           break;
         case "legendary":
-          Renderer.drawCircle(Renderer.YELLOW, PetDisplayX, PetDisplayY, 25, 90, 5);
+          Renderer.drawCircle(Renderer.GOLD, PetDisplayX, PetDisplayY, 25, 90, 5);
           break;
         default:
           Renderer.drawCircle(Renderer.RED, PetDisplayX, PetDisplayY, 25, 90, 5);
