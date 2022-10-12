@@ -1,8 +1,7 @@
 import Settings from './config.js'
+import {inSkyblock} from './utils.js'
 
 export function PetDisplay() {
-  var PetDisplayX = 930
-  var PetDisplayY = 30
 
   register("renderOverlay", renderPetDisplay);
   
@@ -16,6 +15,10 @@ export function PetDisplay() {
   })
 }
 function renderPetDisplay() {
+  
+  var PetDisplayX = 930
+  var PetDisplayY = 30
+
   if (Settings.pet_display){
     if (inSkyblock()){
       Renderer.drawCircle(Renderer.RED, PetDisplayX, PetDisplayY, 25, 90, 5);

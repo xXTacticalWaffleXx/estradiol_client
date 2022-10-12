@@ -1,3 +1,6 @@
+import Settings from './config.js'
+import {inSkyblock} from './utils.js'
+
 export function Ashfang() {
   
   let ash_counter = 0;
