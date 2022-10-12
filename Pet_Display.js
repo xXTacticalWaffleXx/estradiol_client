@@ -16,8 +16,9 @@ export function PetDisplay() {
 
     let formatted_message = EventLib.getMessage(event);
         formatted_message = formatted_message.toString();
-    
-    if (formatted_message.includes("§f")){
+    if (umsg.includes("despawned")){
+      pet_rarity = "no_pet";
+    } else if (formatted_message.includes("§f")){
       //common
       ChatLib.chat("common");
       pet_rarity = "common";
@@ -58,11 +59,13 @@ function renderPetDisplay() {
           Renderer.drawCircle(Renderer.BLUE, PetDisplayX, PetDisplayY, 25, 90, 5);
           break;
         case "epic":
-          Renderer.drawCircle(Renderer.LIGHT_PURPLE, PetDisplayX, PetDisplayY, 25, 90, 5);
+          Renderer.drawCircle(Renderer.DARK_PURPLE, PetDisplayX, PetDisplayY, 25, 90, 5);
           break;
         case "legendary":
           Renderer.drawCircle(Renderer.GOLD, PetDisplayX, PetDisplayY, 25, 90, 5);
           break;
+        case "no pet":
+          Renderer.drawCircle(Renderer.RED, PetDisplayX, PetDisplayY, 25, 90, 5);
         default:
           Renderer.drawCircle(Renderer.RED, PetDisplayX, PetDisplayY, 25, 90, 5);
       }
