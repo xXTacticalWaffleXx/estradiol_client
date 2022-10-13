@@ -12,7 +12,7 @@ export function deathBullyer(){
         if (umsg.includes("[")) return
       }
         // check the person who died
-        if (umsg.includes(Settings.death_copy_name) == false) ChatLib.chat("ya mum")
+        if (umsg.includes(Settings.death_copy_name) == false) return
         setTimeout(() =>{
         ChatLib.command("pc " + umsg);
         }, 2000);
