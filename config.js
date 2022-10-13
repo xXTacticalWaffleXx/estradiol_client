@@ -34,6 +34,14 @@ class Settings {
         subcategory: "Ashfang",
     })
     pchat_messages = false;
+
+    @SwitchProperty({
+        name: "Auto Warp",
+        description: "Automatically warp to dungeon hub when kuudra is killed.",
+        category: "General",
+        subcategory: "Ashfang",
+    })
+    ash_auto_warp = false;
     
     @SwitchProperty({
         name: "Death Message Copier",

@@ -14,16 +14,19 @@ export function Ashfang() {
         if (umsg.includes("Party")) return
         if (umsg.includes("[")) return
       }
-      // if message contains onlyskelett died ppost it in p chat
-      if (umsg.includes("ASHFANG DOWN!")){ // add auto dn feature, add prompt for if you want to warp ala popup f reqs use a func to make a "do ya wanna X thing" get screen size and render at 50%
+      if (umsg.includes("ASHFANG DOWN!")){ 
         ash_counter++;
         if (Settings.debug){ ChatLib.chat("[Debug] ashfang registered counter: " + ash_counter); }
         if (ash_counter > 3){
-          //ChatLib.chat("RESET");
           Client.showTitle("RESET", "", 0, 15, 0);
           if (Settings.pchat_messages) {ChatLib.command("pc 4/4 reset"); }
         } else {
           if (Settings.pchat_messages){ ChatLib.command("pc " + ash_counter + "/4"); }
+            if (Settings.ash_auto_warp){
+            setTimeout(() =>{
+              ChatLib.command("warp dungeon_hub");
+            }, 2000);
+          }
         }
       } else if (umsg.includes("BLADESOUL DOWN!")){
         ash_counter = 0;
