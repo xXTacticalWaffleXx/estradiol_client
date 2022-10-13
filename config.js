@@ -49,7 +49,7 @@ class Settings {
         category: "General",
         subcategory: "Auto Bully",
     })
-    death_copy = true;
+    death_copy = false;
 
     @TextProperty({
         name: "Player",
