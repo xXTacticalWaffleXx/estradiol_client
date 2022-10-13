@@ -14,8 +14,8 @@ export function Ashfang() {
         if (umsg.includes("Party")) return
         if (umsg.includes("[")) return
       }
-
-      if (umsg.includes("ASHFANG DOWN!")){
+      // if message contains onlyskelett died ppost it in p chat
+      if (umsg.includes("ASHFANG DOWN!")){ // add auto dn feature, add prompt for if you want to warp ala popup f reqs use a func to make a "do ya wanna X thing" get screen size and render at 50%
         ash_counter++;
         if (Settings.debug){ ChatLib.chat("[Debug] ashfang registered counter: " + ash_counter); }
         if (ash_counter > 3){

@@ -13,3 +13,7 @@ export function inSkyblock() {
     return false;
   }
 }
+
+export function CommandDialogue(){
+  ChatLib.chat(renderer.screen.getHeight())
+}
