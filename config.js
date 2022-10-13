@@ -34,6 +34,23 @@ class Settings {
         subcategory: "Ashfang",
     })
     pchat_messages = false;
+    
+    @SwitchProperty({
+        name: "Death Message Copier",
+        description: "Automatically send a chosen players death messages in party chat",
+        category: "General",
+        subcategory: "Auto Bully",
+    })
+    death_copy = true;
+
+    @TextProperty({
+        name: "Player",
+        description: "the player who's death messages you want to be copied",
+        category: "General",
+        subcategory: "Auto Bully",
+    })
+    death_copy_name;
+
     // Pets
     @SwitchProperty({
         name: "Pet display",

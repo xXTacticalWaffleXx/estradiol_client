@@ -20,23 +20,18 @@ export function PetDisplay() {
       pet_rarity = "no_pet";
     } else if (formatted_message.includes("§f")){
       //common
-      ChatLib.chat("common");
       pet_rarity = "common";
     } else if (formatted_message.includes("§9")){
       //rare
-      ChatLib.chat("rare");
       pet_rarity = "rare";
     } else if (formatted_message.includes("§5")){
       //epic
-      ChatLib.chat("epic");
       pet_rarity = "epic";
     } else if (formatted_message.includes("§6")){
       //legendary
-      ChatLib.chat("legendary");
       pet_rarity = "legendary";
     } else {
       //uncommon fuck hypixel for using green for uncomon
-      ChatLib.chat("uncommon");
       pet_rarity = "uncommon";
     }
   })
