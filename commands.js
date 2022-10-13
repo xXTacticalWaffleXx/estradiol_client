@@ -11,9 +11,4 @@ export default function registerCommands() {
   register("command", ()=> {
     ash_counter = 0;
   }).setName("ashreset");
-
-  register("command", ()=> {
-    ChatLib.chat(inSkyblock());
-  }).setName("sbtest");
-
 }
