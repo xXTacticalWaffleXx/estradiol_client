@@ -1,7 +1,7 @@
 {
     "name": "Estradiol Clien't",
     "author": "tactical waffle#1560",
-    "description": "some useful bits of code",
+    "description": "Some random features useful for Skyblock",
     "entry": "index.js",
     "version": "alpha 0.0.5",
     "requires": []
