@@ -37,7 +37,7 @@ class Settings {
 
     @SwitchProperty({
         name: "Auto Warp",
-        description: "Automatically warp to dungeon hub when kuudra is killed.",
+        description: "Automatically warp to dungeon hub when ashfang is killed as long as you dont need to reset.",
         category: "General",
         subcategory: "Ashfang",
     })
