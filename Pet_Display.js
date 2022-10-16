@@ -30,6 +30,9 @@ export function PetDisplay() {
     } else if (formatted_message.includes("§6")){
       //legendary
       pet_rarity = "legendary";
+    } else if (formatted_message.includes("§d")){
+      //mythic
+      pet_rarity = "mythic";
     } else {
       //uncommon fuck hypixel for using green for uncomon
       pet_rarity = "uncommon";
@@ -59,10 +62,15 @@ function renderPetDisplay() {
         case "legendary":
           Renderer.drawCircle(Renderer.GOLD, PetDisplayX, PetDisplayY, 25, 90, 5);
           break;
+        case "mythic":
+          Renderer.drawCircle(Renderer.LIGHT_PURPLE, PetDisplayX, PetDisplayY, 25, 90, 5);
+          break;
         case "no pet":
           Renderer.drawCircle(Renderer.RED, PetDisplayX, PetDisplayY, 25, 90, 5);
+          break;
         default:
           Renderer.drawCircle(Renderer.RED, PetDisplayX, PetDisplayY, 25, 90, 5);
+          break;
       }
     }
   }
