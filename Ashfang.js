@@ -22,7 +22,7 @@ export function Ashfang() {
           if (Settings.pchat_messages) {ChatLib.command("pc 4/4 reset"); }
         } else {
           if (Settings.pchat_messages){ ChatLib.command("pc " + ash_counter + "/4"); }
-            if (Settings.ash_auto_warp){
+            if (Settings.ash_auto_warp && ash_counter < 4){
             setTimeout(() =>{
               ChatLib.command("warp dungeon_hub");
             }, 2000);
