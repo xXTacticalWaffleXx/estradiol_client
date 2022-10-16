@@ -57,7 +57,7 @@ class Settings {
         category: "General",
         subcategory: "Auto Bully",
     })
-    death_copy_name;
+    death_copy_name = " ";
 
     // Pets
     @SwitchProperty({
