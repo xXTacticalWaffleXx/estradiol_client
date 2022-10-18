@@ -13,7 +13,7 @@ Color,
 } from 'Vigilance';
 @Vigilant("Estradiol", "Estradiol clien\'t", {
     getCategoryComparator: () => (a, b) => {
-        const categories = ['General', 'Pets', 'Debug'];
+        const categories = ['General', 'Pets', 'Memes', 'Debug'];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     }
 })
@@ -42,22 +42,6 @@ class Settings {
         subcategory: "Ashfang",
     })
     ash_auto_warp = false;
-    
-    @SwitchProperty({
-        name: "Death Message Copier",
-        description: "Automatically send a chosen players death messages in party chat",
-        category: "General",
-        subcategory: "Auto Bully",
-    })
-    death_copy = false;
-
-    @TextProperty({
-        name: "Player",
-        description: "the player who's death messages you want to be copied",
-        category: "General",
-        subcategory: "Auto Bully",
-    })
-    death_copy_name = " ";
 
     // Pets
     @SwitchProperty({
@@ -67,6 +51,24 @@ class Settings {
         subcategory: "Pet display",
     })
     pet_display = false;
+
+    // Memes
+    @SwitchProperty({
+        name: "Death Message Copier",
+        description: "Automatically send a chosen players death messages in party chat",
+        category: "Memes",
+        subcategory: "Auto Bully",
+    })
+    death_copy = false;
+
+    @TextProperty({
+        name: "Player",
+        description: "the player who's death messages you want to be copied",
+        category: "Memes",
+        subcategory: "Auto Bully",
+    })
+    death_copy_name = " ";
+
     // Debug
     @SwitchProperty({
         name: "Debug",
