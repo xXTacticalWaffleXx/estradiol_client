@@ -43,6 +43,14 @@ class Settings {
     })
     ash_auto_warp = false;
 
+    @SwitchProperty({
+        name: "Readable DMs",
+        description: "Makes dms be white instead of grey.",
+        category: "General",
+        subcategory: "Chat",
+    })
+    readable_dms = false;
+
     // Pets
     @SwitchProperty({
         name: "Pet display",
