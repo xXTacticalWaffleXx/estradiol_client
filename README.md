@@ -22,5 +22,5 @@ estradiol client is a chat triggers module with some useful functions
 
 ## FAQ
 
-is it a client?
+is it a client? <br>
 no i just thought the name was cool
