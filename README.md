@@ -17,7 +17,7 @@ give others those same freedoms and i wont merge any obfuscated code.
 
 Right now estradiol clien't isnt on the official chat triggers repository so you need to install
 it manually, to do this go to .minecraft/config/ChatTriggers/modules and clone this repository.
-after doing so you do then need to rename the folder to Estradiol (case sensitive) otherwise
+After doing so you do then need to rename the folder to Estradiol (case sensitive) otherwise
 the vigilence ui wont work.
 
 ## FAQ
