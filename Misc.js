@@ -20,3 +20,24 @@ export function deathBullyer(){
     }
   })
 }
+
+export function ReadableDms(){
+  register ("chat", event =>{
+    if (Settings.readable_dms){
+      let umsg = ChatLib.getChatMessage(event, true)
+      let unformatted = ChatLib.removeFormatting(ChatLib.getChatMessage(event))
+      console.log(unformatted)
+      console.log(umsg)
+      if (umsg.startsWith("&dFrom")){
+        let message = new Message(umsg.replace("&7", "&f").replace("&7", "&f"))
+        cancel(event)
+        message.chat()
+      }
+      if (umsg.startsWith("&dTo")){ // todo: make this shit less clunk yo
+        let message = new Message(umsg.replace("&7", "&f").replace("&7", "&f"))
+        cancel(event)
+        message.chat()
+      }
+    }
+  })
+}
