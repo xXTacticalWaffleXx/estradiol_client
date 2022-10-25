@@ -25,13 +25,13 @@ export function ReadableDms(){
   register ("chat", event =>{
     if (Settings.readable_dms){
       let umsg = ChatLib.getChatMessage(event, true)
-      if (umsg.startsWith("&dFrom")){
-        let message = new Message(umsg.replace("&7", "&f").replace("&7", "&f"))
+      if (umsg.startsWith("&dFrom")){ // todo: make this code not make the names of nons white
+        let message = new Message(umsg.replace("&7", "&f").replace("&7", "&f").replace("&7", "&f"))
         cancel(event)
         message.chat()
       }
       if (umsg.startsWith("&dTo")){ // todo: make this shit less clunk yo
-        let message = new Message(umsg.replace("&7", "&f").replace("&7", "&f"))
+        let message = new Message(umsg.replace("&7", "&f").replace("&7", "&f").replace("&7", "&f"))
         cancel(event)
         message.chat()
       }
