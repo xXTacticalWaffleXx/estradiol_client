@@ -30,7 +30,10 @@ export function Ashfang() {
         }
       } else if (umsg.includes("BLADESOUL DOWN!")){
         ash_counter = 0;
-        if (Settings.debug){ ChatLib.chat("[Debug] reset") }
+        if (Settings.debug){ ChatLib.chat("[Debug] reset (bladesoul)") }
+      } else if(umsg.includes("MAGE OUTLAW DOWN")){
+        ash_counter = 0;
+        if (Settings.debug){ ChatLib.chat("[debug] reset (outlaw)")}
       }
     }
   })
