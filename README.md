@@ -2,8 +2,9 @@
 
 ## Features
 
-Estradiol clien't has a few features, mostly small QOL improvements such as
-an ashfang counter that tells you when you need to reset and more readable dms
+Estradiol clien't is a ChatTriggers module with a few features, mostly small
+QOL improvements such as an ashfang counter that tells you when you need to
+reset and more readable dms on the hypixel network.
 
 ## Contributing
 
@@ -18,7 +19,6 @@ Right now estradiol clien't isnt on the official chat triggers repository so you
 it manually, to do this go to .minecraft/config/ChatTriggers/modules and clone this repository.
 after doing so you do then need to rename the folder to Estradiol (case sensitive) otherwise
 the vigilence ui wont work.
-estradiol client is a chat triggers module with some useful functions
 
 ## FAQ
 
