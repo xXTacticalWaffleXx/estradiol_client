@@ -1,7 +1,7 @@
 {
     "name": "Estradiol Clien't",
     "author": "tactical waffle#1560",
-    "description": "Some random features useful for Skyblock",
+    "description": "Some random features useful for Hypixel",
     "entry": "index.js",
     "version": "alpha 0.1.0",
     "requires": []
