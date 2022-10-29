@@ -58,6 +58,14 @@ class Settings {
         subcategory: "Dungeons",
     })
     lunar_detection = false;
+    
+    @SwitchProperty({
+        name: "Lunar auto kick",
+        description: "Automatically kick lunar users from your party",
+        category: "General",
+        subcategory: "Dungeons",
+    })
+    lunar_auto_kick = false;
 
     // Pets
     @SwitchProperty({
@@ -102,6 +110,7 @@ class Settings {
 
     constructor() {
         this.initialize(this);
+        this.addDependency("Lunar auto kick", "Lunar Detection")
     }
 }
 export default new Settings();

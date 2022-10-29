@@ -65,6 +65,9 @@ export function kickLunarUsers(){
           if (lunar_reply.player.online){
             //this code runs if the player is on lunar
             Client.showTitle(player_name + " ON LUNAR", "", 0 , 75, 0)
+            if (Settings.lunar_auto_kick){
+              ChatLib.command("p remove " + player_name)
+            }
           }
         }
       })
