@@ -51,6 +51,14 @@ class Settings {
     })
     readable_dms = false;
 
+    @SwitchProperty({
+        name: "Lunar Detection",
+        description: "Tells you if someone on lunar joins your party finder",
+        category: "General",
+        subcategory: "Dungeons",
+    })
+    lunar_detection = false;
+
     // Pets
     @SwitchProperty({
         name: "Pet display",
