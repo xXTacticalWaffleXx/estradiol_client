@@ -1,10 +1,18 @@
 <h1 align="center"> Estradiol clien't </h1>
 
-## Features
+## Overview
 
 Estradiol clien't is a ChatTriggers module with a few features, mostly small
 QOL improvements such as an ashfang counter that tells you when you need to
 reset and more readable dms on the hypixel network.
+
+## Features
+
+Ashfang counter, the ashfang counter shows a title on your screen when its time to reset <br>
+<br>
+Lunar Detection, if someone on lunar client joins your party finder this function will notify you so you can kick them <br>
+<br>
+Readable Dms, when someone sends you a dm this changes the colour from grey to white to make it easier to read
 
 ## Contributing
 
