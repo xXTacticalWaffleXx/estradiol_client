@@ -72,11 +72,11 @@ export function kickLunarUsers(){
       .catch(function(error, response){
         const lunar_reply = JSON.parse(response);
         if (!lunar_reply.success){
-          console.log("[estradiol clien't] Lunar API reply failed")
+          console.error("[estradiol clien't] Lunar API reply failed")
         }
       })
     }).catch(function(error) {
-      console.log("[estradiol clien't] Mojang API reply failed")
+      console.error("[estradiol clien't] Mojang API reply failed")
     })
   }
   })
