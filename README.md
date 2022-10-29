@@ -12,7 +12,7 @@ Ashfang counter, the ashfang counter shows a title on your screen when its time 
 <br>
 Lunar Detection, if someone on lunar client joins your party finder this function will notify you so you can kick them <br>
 <br>
-Readable Dms, when someone sends you a dm this changes the colour from grey to white to make it easier to read
+Readable Dms and nons, changes the colour of dms/non messages to white to make them easier to read
 
 ## Contributing
 
