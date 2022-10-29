@@ -38,3 +38,40 @@ export function ReadableDms(){
     }
   })
 }
+
+export function ReadableNons(){
+  register ("chat", event =>{
+    if(Settings.readable_nons){
+      let formatted = ChatLib.getChatMessage(event, true)
+      let unformatted = ChatLib.removeFormatting(ChatLib.getChatMessage(event))
+
+      let name = unformatted.split(':')[0];
+      console.log(name)
+      // test if someone is a non
+      if (unformatted.includes("[VIP]")) return
+      if (unformatted.includes("[VIP+]")) return
+      if (unformatted.includes("[MVP]")) return
+      if (unformatted.includes("[MVP+]")) return
+      if (unformatted.includes("[MVP++]")) return
+      if (unformatted.includes("[YOUTUBE]")) return
+      if (unformatted.includes("[ADMIN]")) return
+      if (unformatted.includes("[OWNER]")) return
+      // test for player sent
+      if (!unformatted.includes(":")) return
+
+      var split_string = formatted.split("");
+      var reverse_array = split_string.reverse();
+      var join_array = reverse_array.join("");
+
+      var dingus = join_array.replace("7&", "f&");
+
+      split_string = dingus.split("");
+      reverse_array = split_string.reverse();
+      var output = reverse_array.join("");
+
+      let message =  new Message(output);
+      cancel(event);
+      message.chat();
+    }
+  })
+}

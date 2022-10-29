@@ -50,6 +50,14 @@ class Settings {
         subcategory: "Chat",
     })
     readable_dms = false;
+    
+    @SwitchProperty({
+        name: "Readable non chat",
+        description: "Makes non's messages be white instead of grey.",
+        category: "General",
+        subcategory: "Chat",
+    })
+    readable_nons = false;
 
     @SwitchProperty({
         name: "Lunar Detection",
