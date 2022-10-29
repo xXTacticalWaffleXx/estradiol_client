@@ -46,7 +46,6 @@ export function ReadableNons(){
       let unformatted = ChatLib.removeFormatting(ChatLib.getChatMessage(event))
 
       let name = unformatted.split(':')[0];
-      console.log(name)
       // test if someone is a non
       if (unformatted.includes("[VIP]")) return
       if (unformatted.includes("[VIP+]")) return
