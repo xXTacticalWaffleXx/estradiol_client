@@ -44,8 +44,6 @@ export function kickLunarUsers(){
     player_name = player_name.replace(" joined the dungeon group", "")
     player_name = player_name.replace("Dungeon Finder > ", "")
 
-    console.log(player_name)
-
     var url = "https://api.mojang.com/users/profiles/minecraft/" + player_name;
     var is_on_lunar = false;
     request(url)
