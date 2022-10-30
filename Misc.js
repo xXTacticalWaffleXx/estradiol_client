@@ -58,15 +58,15 @@ export function ReadableNons(){
       // test for player sent
       if (!unformatted.includes(":")) return
 
-      var split_string = formatted.split("");
-      var reverse_array = split_string.reverse();
-      var join_array = reverse_array.join("");
+      let split_string = formatted.split("");
+      let reverse_array = split_string.reverse();
+      let join_array = reverse_array.join("");
 
-      var dingus = join_array.replace("7&", "f&");
+      let dingus = join_array.replace("7&", "f&");
 
       split_string = dingus.split("");
       reverse_array = split_string.reverse();
-      var output = reverse_array.join("");
+      let output = reverse_array.join("");
 
       let message =  new Message(output);
       cancel(event);
