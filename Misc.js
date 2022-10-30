@@ -47,14 +47,14 @@ export function ReadableNons(){
 
       let name = unformatted.split(':')[0];
       // test if someone is a non
-      if (unformatted.includes("[VIP]")) return
-      if (unformatted.includes("[VIP+]")) return
-      if (unformatted.includes("[MVP]")) return
-      if (unformatted.includes("[MVP+]")) return
-      if (unformatted.includes("[MVP++]")) return
-      if (unformatted.includes("[YOUTUBE]")) return
-      if (unformatted.includes("[ADMIN]")) return
-      if (unformatted.includes("[OWNER]")) return
+      if (unformatted.includes("[VIP]"))      return
+      if (unformatted.includes("[VIP+]"))     return
+      if (unformatted.includes("[MVP]"))      return
+      if (unformatted.includes("[MVP+]"))     return
+      if (unformatted.includes("[MVP++]"))    return
+      if (unformatted.includes("[YOUTUBE]"))  return
+      if (unformatted.includes("[ADMIN]"))    return
+      if (unformatted.includes("[OWNER]"))    return
       // test for player sent
       if (!unformatted.includes(":")) return
 
