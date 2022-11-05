@@ -2,7 +2,7 @@ import Settings from './config.js'
 import {inSkyblock, kickLunarUsers} from './utils.js'
 
 export default function registerCommands() {
-  register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny", "ec"]);
+  register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny", "es"]);
 
   register("command", ()=> {
     ChatLib.chat(ash_counter);
