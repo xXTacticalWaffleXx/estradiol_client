@@ -13,7 +13,7 @@ Color,
 } from 'Vigilance';
 @Vigilant("EstradiolClient", "Estradiol clien\'t", {
     getCategoryComparator: () => (a, b) => {
-        const categories = ['General', 'Pets', 'Memes', 'Debug'];
+        const categories = ['General', 'Chat', 'Pets', 'Memes', 'Debug'];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     }
 })
@@ -74,6 +74,23 @@ class Settings {
         subcategory: "Dungeons",
     })
     lunar_auto_kick = false;
+    // Chat
+
+    @SwitchProperty({
+        name: "Auto wb",
+        description: "Automatically say something when someone logs on in your guild",
+        category: "Chat",
+        subcategory: "Guild",
+    })
+    auto_wb = false;
+
+    @TextProperty({
+        name: "wb message",
+        description: "the message you want to be sent when someone joins your guild",
+        category: "Chat",
+        subcategory: "Guild",
+    })
+    wb_string = "wb";
 
     // Pets
     @SwitchProperty({
@@ -126,7 +143,10 @@ class Settings {
 
     constructor() {
         this.initialize(this);
+                            //this shows up if this is on
+                            // \/               \/
         this.addDependency("Lunar auto kick", "Lunar Detection")
+        this.addDependency("wb message", "Auto wb")
     }
 }
 export default new Settings();
