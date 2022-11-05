@@ -11,7 +11,7 @@ Color,
 @TextProperty,
 @Vigilant,
 } from 'Vigilance';
-@Vigilant("Estradiol", "Estradiol clien\'t", {
+@Vigilant("EstradiolClient", "Estradiol clien\'t", {
     getCategoryComparator: () => (a, b) => {
         const categories = ['General', 'Pets', 'Memes', 'Debug'];
         return categories.indexOf(a.name) - categories.indexOf(b.name);

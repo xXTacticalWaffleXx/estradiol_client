@@ -1,8 +1,8 @@
 {
-    "name": "Estradiol Clien't",
+    "name": "EstradiolClient",
     "author": "tactical waffle#1560",
     "description": "Some random features useful for Hypixel",
     "entry": "index.js",
-    "version": "1.2.0",
-    "requires": [Vigilance]
+    "version": "1.2.3",
+    "requires": ["Vigilance", "PromiseV2"]
 }
