@@ -101,6 +101,14 @@ class Settings {
     })
     death_copy_name = " ";
 
+    @SwitchProperty({
+        name: "Auto party transfer",
+        description: "Automatically transfer a party back if it is transfered to you",
+        category: "Memes",
+        subcategory: "Party",
+    })
+    auto_transfer = false;
+
     // Debug
     @SwitchProperty({
         name: "Debug",
