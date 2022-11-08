@@ -5,6 +5,11 @@
 # this script is meant to make it easy to make new releases of estradiol client
 # for the chat triggers website
 
+if ls EstradiolClient 2> /dev/null > /dev/null; then
+  echo "EstradiolClient already exists, exiting"
+  exit
+fi
+
 mkdir EstradiolClient
 
 cp Ashfang.js ./EstradiolClient
