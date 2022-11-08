@@ -74,6 +74,14 @@ class Settings {
         subcategory: "Dungeons",
     })
     lunar_auto_kick = false;
+
+    @SwitchProperty({
+        name: "Send coords for high powder chests",
+        description: "Sends the coords of any chest with more then 1k mithril or gemstone powder",
+        category: "General",
+        subcategory: "Mining",
+    })
+    send_powder_messages = false;
     // Chat
 
     @SwitchProperty({
