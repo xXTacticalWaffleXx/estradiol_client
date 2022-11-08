@@ -3,6 +3,6 @@
     "author": "tactical waffle#1560",
     "description": "Some random features useful for Hypixel",
     "entry": "index.js",
-    "version": "1.3.1",
+    "version": "1.4.0",
     "requires": ["Vigilance", "requestV2"]
 }
