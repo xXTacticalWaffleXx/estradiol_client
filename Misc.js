@@ -176,21 +176,16 @@ export function SendPowderMessages(){
           umsg = umsg.replace(" Mithril Powder", "")
           umsg = umsg.replace("You received +", "")
           mithril_count = mithril_count + Number(umsg)
-          if (!tally_called){
-            PowderTally();
-            tally_called = true;
-          }
         }
         if (umsg.includes(" Gemstone Powder")){
           umsg = umsg.replace(" Gemstone Powder", "")
           umsg = umsg.replace("You received +", "")
           gemstone_count = gemstone_count + Number(umsg)
+        }
           if (!tally_called){
             PowderTally();
             tally_called = true;
           }
-        }
-      console.log(umsg)
       }
     }
   })
