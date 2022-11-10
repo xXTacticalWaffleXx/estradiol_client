@@ -50,6 +50,14 @@ class Settings {
         subcategory: "Chat",
     })
     readable_dms = false;
+
+    @SwitchProperty({
+        name: "Dms Imgur Fix",
+        description: "Makes readable dms not happen on messages with imgur links as a quick and dirty way to fix patcher not working with them when using readable dms",
+        category: "General",
+        subcategory: "Chat",
+    })
+    dms_imgur_fix = false;
     
     @SwitchProperty({
         name: "Readable non chat",
@@ -58,6 +66,14 @@ class Settings {
         subcategory: "Chat",
     })
     readable_nons = false;
+    
+    @SwitchProperty({
+        name: "Non Imgur Fix",
+        description: "Makes readable nons not happen on messages with imgur links as a quick and dirty way to fix patcher not working with them when using readable dms",
+        category: "General",
+        subcategory: "Chat",
+    })
+    nons_imgur_fix = false;
 
     @SwitchProperty({
         name: "Lunar Detection",
@@ -155,6 +171,8 @@ class Settings {
                             // \/               \/
         this.addDependency("Lunar auto kick", "Lunar Detection")
         this.addDependency("wb message", "Auto wb")
+        this.addDependency("Dms Imgur Fix", "Readable DMs")
+        this.addDependency("Non Imgur Fix", "Readable non chat")
     }
 }
 export default new Settings();

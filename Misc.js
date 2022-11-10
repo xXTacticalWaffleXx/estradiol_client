@@ -25,6 +25,7 @@ export function ReadableDms(){
   register ("chat", event =>{
     if (Settings.readable_dms){
       let umsg = ChatLib.getChatMessage(event, true)
+      if (umsg.includes("imgur.com") && Settings.dms_imgur_fix) return;
       if (umsg.startsWith("&dFrom")){
         let message = new Message(umsg.replace("&7", "&f").replace("&7", "&f").replace("&7", "&f").replace("&f", "&7"))
         cancel(event)
@@ -44,6 +45,8 @@ export function ReadableNons(){
     if(Settings.readable_nons){
       let formatted = ChatLib.getChatMessage(event, true)
       let unformatted = ChatLib.removeFormatting(ChatLib.getChatMessage(event))
+      
+      if (unformatted.includes("imgur.com") && Settings.nons_imgur_fix) return;
 
       let name = unformatted.split(':')[0];
       // test if someone is a non
