@@ -1,5 +1,5 @@
 import Settings from './config.js'
-import {inSkyblock, kickLunarUsers} from './utils.js'
+import {inSkyblock} from './utils.js'
 
 export default function registerCommands() {
   register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny", "es"]);
@@ -12,4 +12,7 @@ export default function registerCommands() {
     ash_counter = 0;
   }).setName("ashreset");
   
+  register("command", ()=>{
+
+  })
 }
