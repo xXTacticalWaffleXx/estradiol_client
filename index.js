@@ -10,12 +10,12 @@ import {PetDisplay} from './Pet_Display.js'
 registerCommands();
 Ashfang();
 PetDisplay();
-//deathBullyer();
-//ReadableDms();
-//kickLunarUsers();
-//ReadableNons();
-//autoRetransferParty();
-//AutoWb();
-//SendPowderMessages();
+deathBullyer();
+ReadableDms();
+kickLunarUsers();
+ReadableNons();
+autoRetransferParty();
+AutoWb();
+SendPowderMessages();
 
 import './Misc.js'
