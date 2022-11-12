@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd ~/skyblock_mods/config/ChatTriggers/modules/CustomConsole/ || exit
+
+node viewer.js
