@@ -116,15 +116,6 @@ class Settings {
     })
     wb_string = "wb";
 
-    // Pets
-    @SwitchProperty({
-        name: "Pet display",
-        description: "Shows what pet you are using VERY WIP DONT USE XD.",
-        category: "Pets",
-        subcategory: "Pet display",
-    })
-    pet_display = false;
-
     // Memes
     @SwitchProperty({
         name: "Death Message Copier",
