@@ -21,3 +21,5 @@ cp -r misc ./EstradiolClient
 cp -r commands ./EstradiolClient
 
 zip -r EstradiolClient.zip EstradiolClient
+
+rm -r EstradiolClient
