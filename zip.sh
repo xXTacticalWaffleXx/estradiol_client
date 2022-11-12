@@ -12,16 +12,12 @@ fi
 
 mkdir EstradiolClient
 
-cp Ashfang.js ./EstradiolClient
-cp LICENCE ./EstradiolClient
-cp Misc.js ./EstradiolClient
-cp Pet_Display.js ./EstradiolClient
-cp commands.js ./EstradiolClient
-cp config.js ./EstradiolClient
 cp index.js ./EstradiolClient
+cp config.js ./EstradiolClient
 cp metadata.json ./EstradiolClient
-cp utils.js ./EstradiolClient
+
+cp -r utils ./EstradiolClient
+cp -r misc ./EstradiolClient
+cp -r commands ./EstradiolClient
 
 zip -r EstradiolClient.zip EstradiolClient
-
-rm -r EstradiolClient

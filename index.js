@@ -2,23 +2,19 @@
 
 // todo: write this shit better
 
-import Settings from './config.js'
-import {inSkyblock} from './utils.js'
-import registerCommands from './commands.js'
-import {Ashfang} from './Ashfang.js'
-import {PetDisplay} from './Pet_Display.js'
-import {deathBullyer, 
-  ReadableDms, 
-  ReadableNons, 
-  autoRetransferParty, 
-  AutoWb, 
-  SendPowderMessages,
-  kickLunarUsers,
-} from './Misc.js'
+import {Ashfang} from './misc/AshfangCounter.js'
+import {autoRetransferParty} from './misc/AutoRetransferParty.js'
+import {SendPowderMessages} from './misc/AutoSendHighPowderChests.js'
+import {AutoWb} from './misc/AutoWb.js'
+import {ReadableDms} from './misc/ReadableDms.js'
+import {ReadableNons} from './misc/ReadableNons.js'
+import {kickLunarUsers} from './misc/kickLunarUsers.js'
+import {deathBullyer} from './misc/DeathAutoBullyer.js'
+
+import {registerCommands} from './commands/RegisterCommands.js'
 
 registerCommands();
 Ashfang();
-PetDisplay();
 deathBullyer();
 ReadableDms();
 kickLunarUsers();
