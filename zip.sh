@@ -12,13 +12,13 @@ fi
 
 mkdir EstradiolClient
 
+cp -r features ./EstradiolClient
+cp -r misc ./EstradiolClient
+cp -r utils ./EstradiolClient
+
 cp index.js ./EstradiolClient
 cp config.js ./EstradiolClient
 cp metadata.json ./EstradiolClient
-
-cp -r utils ./EstradiolClient
-cp -r misc ./EstradiolClient
-cp -r commands ./EstradiolClient
 
 zip -r EstradiolClient.zip EstradiolClient
 
