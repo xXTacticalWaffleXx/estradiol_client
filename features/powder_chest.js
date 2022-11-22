@@ -28,7 +28,7 @@ register("chat", (amount, type) => {
     if(type.includes("Gemstone")) gem_powder += powder_amount
     else if(type.includes("Mithril")) mith_powder += powder_amount
     //checks the amount to send in chat cords
-    if(mith_powder > 1 || gem_powder > 1){
+    if(mith_powder > 1000 || gem_powder > 1000){
         let x = Player.getX()
         let y = Player.getY()
         let z = Player.getZ()
