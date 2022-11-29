@@ -6,10 +6,12 @@ register("chat", (event) => {
     if (msg.includes("imgur.com") && Settings.dms_imgur_fix) return;
     if(msg.startsWith("&dFrom") || msg.startsWith("&dTo")){
         let readable_name = msg.split(":")[0];
-        let readable_color = msg.split(":")[1].replace(" ", "").replace("&7", "&f");
+        let readable_color = msg.replace(readable_name, "").replace("&7", "&f").replace(": ", "")
         let message = new Message(`${readable_name}: ${readable_color}`);
         cancel(event);
         message.chat();
+        console.log(readable_name)
+        console.log(readable_color)
     }
 });
 //readable nons
