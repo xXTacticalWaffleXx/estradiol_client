@@ -10,8 +10,6 @@ register("chat", (event) => {
         let message = new Message(`${readable_name}: ${readable_color}`);
         cancel(event);
         message.chat();
-        console.log(readable_name)
-        console.log(readable_color)
     }
 });
 //readable nons
