@@ -13,7 +13,7 @@ Color,
 } from 'Vigilance';
 @Vigilant("EstradiolClient", "Estradiol clien\'t", {
     getCategoryComparator: () => (a, b) => {
-        const categories = ['General', 'Chat', 'Pets', 'Memes', 'Debug'];
+        const categories = ['General', 'Dungeons', 'Chat', 'Pets', 'Memes', 'Debug'];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     }
 })
@@ -98,6 +98,28 @@ class Settings {
         subcategory: "Mining",
     })
     send_powder_messages = false;
+    // Dungeons
+    @SwitchProperty({
+        name: "Bonzo mask display",
+        description: "Display what bonzo masks have been used and what havent",
+        category: "Dungeons",
+        subcategory: "Bonzo mask display",
+    })
+    render_bonzo_mask_display = false;
+
+    @PercentSliderProperty({
+        name: "Bonzo mask display height",
+        category: "Dungeons",
+        subcategory: "Bonzo mask display",
+    })
+    bonzo_mask_display_height = 5;
+
+    @PercentSliderProperty({
+        name: "Bonzo mask display width",
+        category: "Dungeons",
+        subcategory: "Bonzo mask display",
+    })
+    bonzo_mask_display_width = 5;
     // Chat
 
     @SwitchProperty({
@@ -164,6 +186,8 @@ class Settings {
         this.addDependency("wb message", "Auto wb")
         this.addDependency("Dms Imgur Fix", "Readable DMs")
         this.addDependency("Non Imgur Fix", "Readable non chat")
+        this.addDependency("Bonzo mask display width", "Bonzo mask display")
+        this.addDependency("Bonzo mask display height", "Bonzo mask display")
     }
 }
 export default new Settings();
