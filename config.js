@@ -13,7 +13,7 @@ Color,
 } from 'Vigilance';
 @Vigilant("EstradiolClient", "Estradiol clien\'t", {
     getCategoryComparator: () => (a, b) => {
-        const categories = ['General', 'Dungeons', 'Chat', 'Pets', 'Memes', 'Debug'];
+        const categories = ['General', 'Mining',, 'Dungeons', 'Chat', 'Pets', 'Memes', 'Debug'];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     }
 })
@@ -90,14 +90,7 @@ class Settings {
         subcategory: "Dungeons",
     })
     lunar_auto_kick = false;
-
-    @SwitchProperty({
-        name: "Send coords for high powder chests",
-        description: "Sends the coords of any chest with more then 1k mithril or gemstone powder",
-        category: "General",
-        subcategory: "Mining",
-    })
-    send_powder_messages = false;
+    
     // Dungeons
     @SwitchProperty({
         name: "Bonzo mask display",
@@ -112,16 +105,54 @@ class Settings {
         category: "Dungeons",
         subcategory: "Bonzo mask display",
     })
-    bonzo_mask_display_height = 5;
+    bonzo_mask_display_height = 0;
 
     @PercentSliderProperty({
         name: "Bonzo mask display width",
         category: "Dungeons",
         subcategory: "Bonzo mask display",
     })
-    bonzo_mask_display_width = 5;
-    // Chat
+    bonzo_mask_display_width = 0;
+    
+    // Mining
+    @SwitchProperty({
+        name: "Send coords for high powder chests",
+        description: "Sends the coords of any chest with more then 1k mithril or gemstone powder",
+        category: "Mining",
+        subcategory: "Powder Mining",
+    })
+    send_powder_messages = false;
+    
+    @SwitchProperty({
+        name: "Cooldown Display",
+        description: "Shows the cooldown for mining speed boost",
+        category: "Mining",
+        subcategory: "Cooldown Display",
+    })
+    cooldown_display = false;
+    
+    @SwitchProperty({
+        name: "Show Title On Speed Boost Availible",
+        description: "Shows the title when your mining speed boost is ready",
+        category: "Mining",
+        subcategory: "Cooldown Display",
+    })
+    show_title = false;
+    
+    @PercentSliderProperty({
+        name: "Cooldown display height",
+        category: "Mining",
+        subcategory: "Cooldown Display",
+    })
+    cooldown_display_height = 0;
 
+    @PercentSliderProperty({
+        name: "Cooldown display width",
+        category: "Mining",
+        subcategory: "Cooldown Display",
+    })
+    cooldown_display_width = 0;
+    // Chat
     @SwitchProperty({
         name: "Auto wb",
         description: "Automatically say something when someone logs on in your guild",
