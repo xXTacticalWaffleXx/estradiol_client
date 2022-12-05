@@ -5,7 +5,11 @@ function isInMining() {
   let scoreb = Scoreboard.getLines(false)
   if(scoreb.length == 0) return;
   if (scoreb[4].getName().includes("Magma")) return true;
-  else return false;
+  if (scoreb[4].getName().includes("Jungle")) return true;
+  if (scoreb[4].getName().includes("Precursor")) return true;
+  if (scoreb[4].getName().includes("Goblin")) return true;
+  if (scoreb[4].getName().includes("Crystal")) return true;
+  return false;
 }
 
 register("chat", () =>{
@@ -32,7 +36,3 @@ register("renderOverlay", () =>{
   if (cooldown_remaining == 0){Renderer.drawStringWithShadow("&6Mining Speed Boost &2Ready", x, y)}
   if (cooldown_remaining != 0){Renderer.drawStringWithShadow("&6Mining Speed Boost &4" + cooldown_remaining, x, y)}
 })
-
-register("command", () =>{
-  console.log(scoreb[4].getName())
-}).setName("scorb")
