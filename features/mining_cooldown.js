@@ -27,7 +27,6 @@ register("step", () =>{
 }).setFps(1)
 
 register("renderOverlay", () =>{
-  console.log(isInMining())
   if (!Settings.cooldown_display) return;
   if (!isInMining()) return;
   
