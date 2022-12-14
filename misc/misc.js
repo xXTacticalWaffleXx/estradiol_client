@@ -21,3 +21,8 @@ register("chat", (new_user, old_user) => {
         ChatLib.command(`party transfer ${old_user}`)
     }
 }).setCriteria("The party was transferred to ${*} ${new_user} by ${*} ${old_user}");
+
+register("chat", () => {
+    if(!Settings.auto_join_ch) return;
+    ChatLib.command("enterthecrystalhollows");
+}).setCriteria("You've seen all this before, click here to SKIP the journey!")

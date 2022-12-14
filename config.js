@@ -152,6 +152,15 @@ class Settings {
         subcategory: "Cooldown Display",
     })
     cooldown_display_width = 0;
+
+    @SwitchProperty({
+        name: "Auto enter the crystal hollows",
+        category: "Mining",
+        subcategory: "Misc",
+        description: "Automatically runs /enterthecrystalhollows when the message to skip the minecart ride appears",
+    })
+    auto_join_ch = false;
+
     // Chat
     @SwitchProperty({
         name: "Auto wb",
