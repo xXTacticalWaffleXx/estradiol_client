@@ -1,6 +1,5 @@
 import Settings from '../config.js'
 //Commands
-register("command", Settings.openGUI).setName("estradiol").setAliases(["tranny", "es"]);
 //AutoWB
 register("chat", () => {
     if(!Settings.auto_wb) return;
