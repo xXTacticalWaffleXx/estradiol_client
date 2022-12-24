@@ -10,6 +10,7 @@ function isInMining() {
   if (scoreb[4].getName().includes("Precursor")) return true;
   if (scoreb[4].getName().includes("Goblin")) return true;
   if (scoreb[4].getName().includes("Crystal")) return true;
+  if (scoreb[4].getName().includes("Mithril")) return true;
   return false;
 }
 
