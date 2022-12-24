@@ -17,6 +17,7 @@ cp -r misc ./EstradiolClient
 cp -r utils ./EstradiolClient
 
 cp index.js ./EstradiolClient
+cp commands.js ./EstradiolClient
 cp config.js ./EstradiolClient
 cp metadata.json ./EstradiolClient
 

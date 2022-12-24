@@ -19,6 +19,13 @@ Color,
 })
 class Settings {
     // General
+    @TextProperty({
+        name: 'API key',
+        category: 'General',
+        protected: true,
+    })
+    API_key = '';
+
     @SwitchProperty({
         name: "Ashfang counter",
         description: "Tells you how many ashfangs until you need to reset.",
@@ -130,6 +137,15 @@ class Settings {
         subcategory: "Cooldown Display",
     })
     cooldown_display = false;
+
+    @SwitchProperty({
+        name: "Force render cooldown display",
+        description: "quick and dirty fix for the mining speed cooldown sometimes not rendering",
+        category: "Mining",
+        subcategory: "Cooldown Display",
+    })
+    force_cooldown_display = false;
+    
     
     @SwitchProperty({
         name: "Show Title On Speed Boost Availible",
