@@ -3,7 +3,7 @@ let cooldown_remaining = 0;
 
 function isInMining() {
   if (Settings.force_cooldown_display) return true;
-  let scoreb = Scoreboard.getLines(false);
+  const scoreb = Scoreboard.getLines(false);
   if (scoreb.length == 0) return;
   if (scoreb[4].getName().includes("Magma")) return true;
   if (scoreb[4].getName().includes("Jungle")) return true;
