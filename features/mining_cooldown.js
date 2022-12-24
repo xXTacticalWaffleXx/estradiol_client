@@ -32,8 +32,8 @@ register("renderOverlay", () => {
   if (!Settings.cooldown_display) return;
   if (!isInMining()) return;
 
-  let x = Renderer.screen.getWidth() * Settings.cooldown_display_width;
-  let y = Renderer.screen.getHeight() * Settings.cooldown_display_height;
+  const x = Renderer.screen.getWidth() * Settings.cooldown_display_width;
+  const y = Renderer.screen.getHeight() * Settings.cooldown_display_height;
   const cooldown_remaining = boost_ready - Math.floor(Date.now() / 1000);
 
   if (cooldown_remaining <= 0) {
