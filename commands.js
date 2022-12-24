@@ -11,6 +11,9 @@ register("command", (...args) => {
     case "test":
       ChatLib.chat("test");
       break;
+    case "time":
+      ChatLib.chat(Date.now);
+      break;
     default:
       ChatLib.chat("&7[&dEstradiol Clien't&7] &4Command not Found");
   }

@@ -1,5 +1,5 @@
 import Settings from "../config.js";
-let cooldown_remaining = 0;
+let boost_ready = 0;
 
 function isInMining() {
   if (Settings.force_cooldown_display) return true;
@@ -15,25 +15,17 @@ function isInMining() {
 
 register("chat", () => {
   if (!Settings.cooldown_display) return;
-  cooldown_remaining = 120;
+  boost_ready = Math.floor(Date.now() / 1000) + 120;
 }).setCriteria("You used your Mining Speed Boost Pickaxe Ability!");
 
-register("step", () => {
-  if (!Settings.cooldown_display) return;
-  if (cooldown_remaining == 0) return;
-
-  cooldown_remaining--;
-
-  if (Settings.show_title && cooldown_remaining == 0) {
-    Client.showTitle(
-      "&r&a&r&6Mining Speed Boost &r&ais now available!&r",
-      "",
-      0,
-      25,
-      0,
-    );
+register("chat", (event) => {
+  if (!Settings.show_title) return;
+  const umsg = ChatLib.removeFormatting(ChatLib.getChatMessage(event));
+  if (umsg.match("Mining Speed Boost is now available!")) {
+    Client.showTitle("&dBoost Ready!", "&5Right Click!", 0, 125, 0);
+    World.playSound("random.chestopen", 2, 1);
   }
-}).setFps(1);
+});
 
 register("renderOverlay", () => {
   if (!Settings.cooldown_display) return;
@@ -41,11 +33,12 @@ register("renderOverlay", () => {
 
   let x = Renderer.screen.getWidth() * Settings.cooldown_display_width;
   let y = Renderer.screen.getHeight() * Settings.cooldown_display_height;
+  const cooldown_remaining = boost_ready - Math.floor(Date.now() / 1000);
 
-  if (cooldown_remaining == 0) {
+  if (cooldown_remaining <= 0) {
     Renderer.drawStringWithShadow("&6Mining Speed Boost &2Ready", x, y);
   }
-  if (cooldown_remaining != 0) {
+  if (cooldown_remaining > 0) {
     Renderer.drawStringWithShadow(
       "&6Mining Speed Boost &4" + cooldown_remaining,
       x,
