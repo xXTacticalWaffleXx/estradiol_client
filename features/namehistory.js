@@ -10,20 +10,19 @@ export function NameHistory(name) {
     headers: { "User-Agent": " Mozzila/5.0" },
     json: true,
   }).then((response) => {
-    ChatLib.chat("--------------------");
-    ChatLib.chat(`${response["usernames"][0]["username"]} original name`);
+    ChatLib.chat("&a--------------------");
+    ChatLib.chat(`&d${response["usernames"][0]["username"]} &boriginal name`);
     for (let x in response.usernames) {
       if (x == 0) {
         //do nothing
       } else {
         let changed_at = response["usernames"][x]["changed_at"].split("T")[0];
-        console.log(changed_at);
         ChatLib.chat(
-          `${response["usernames"][x]["username"]} ${changed_at}`,
+          `&d${response["usernames"][x]["username"]} &b${changed_at}`,
         );
       }
     }
-    ChatLib.chat("--------------------");
+    ChatLib.chat("&a--------------------");
   }).catch((error) => {
     console.log(error);
     ChatLib.chat("&7[&dEstradiol Clien't&7] &4An error occoured");
