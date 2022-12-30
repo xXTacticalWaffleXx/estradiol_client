@@ -21,6 +21,7 @@ register("chat", () => {
 
 register("chat", (event) => {
   if (!Settings.show_title) return;
+  if (!isInMining()) return;
   const umsg = ChatLib.removeFormatting(ChatLib.getChatMessage(event));
   if (umsg.match("Mining Speed Boost is now available!")) {
     Client.showTitle("&dBoost Ready!", "&5Right Click!", 0, 125, 0);
