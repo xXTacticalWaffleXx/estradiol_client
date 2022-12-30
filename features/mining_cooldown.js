@@ -11,6 +11,9 @@ function isInMining() {
   if (scoreb[4].getName().includes("Goblin")) return true;
   if (scoreb[4].getName().includes("Crystal")) return true;
   if (scoreb[4].getName().includes("Mithril")) return true;
+  if (scoreb[4].getName().includes("Mines")) return true;
+  if (scoreb[4].getName().includes("Khazad")) return true;
+  if (scoreb[4].getName().includes("City")) return true;
   return false;
 }
 

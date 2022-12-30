@@ -12,6 +12,10 @@ register("command", (...args) => {
     case "name":
       NameHistory(args[1]);
       break;
+    case "scorb":
+      const scoreb = Scoreboard.getLines(false);
+      ChatLib.chat(scoreb[4].getName());
+      break;
     default:
       ChatLib.chat("&7[&dEstradiol Clien't&7] &4Command not Found");
       break;
