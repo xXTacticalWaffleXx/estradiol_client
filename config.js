@@ -236,6 +236,7 @@ class Settings {
 
     constructor() {
         this.initialize(this);
+        this.setCategoryDescription("General", "§dTrans §bRights §fAre §bHuman §dRights")
                             //this shows up if this is on
                             // \/               \/
         this.addDependency("Lunar auto kick", "Lunar Detection")
