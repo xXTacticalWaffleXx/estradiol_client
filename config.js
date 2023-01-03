@@ -13,7 +13,7 @@ Color,
 } from 'Vigilance';
 @Vigilant("EstradiolClient", "Estradiol clien\'t", {
     getCategoryComparator: () => (a, b) => {
-        const categories = ['General', 'Mining',, 'Dungeons', 'Chat', 'Pets', 'Memes', 'Debug'];
+        const categories = ['General', 'Mining', 'Dungeons', 'Chat', 'Pets', 'Memes', 'Debug'];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     }
 })
