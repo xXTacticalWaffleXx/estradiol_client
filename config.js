@@ -120,6 +120,28 @@ class Settings {
         subcategory: "Bonzo mask display",
     })
     bonzo_mask_display_width = 0;
+
+    @SwitchProperty({
+        name: "M6 gyro countdown",
+        description: "currently only shows fm gyros",
+        category: "Dungeons",
+        subcategory: "solvers",
+    })
+    m6_gyro_solver = false;
+
+    @PercentSliderProperty({
+        name: "M6 display height",
+        category: "Dungeons",
+        subcategory: "solvers",
+    })
+    m6_gyro_solver_display_height = 0;
+
+    @PercentSliderProperty({
+        name: "M6 display width",
+        category: "Dungeons",
+        subcategory: "solvers",
+    })
+    m6_gyro_solver_display_width = 0;
     
     // Mining
     @SwitchProperty({
@@ -245,6 +267,8 @@ class Settings {
         this.addDependency("Non Imgur Fix", "Readable non chat")
         this.addDependency("Bonzo mask display width", "Bonzo mask display")
         this.addDependency("Bonzo mask display height", "Bonzo mask display")
+        this.addDependency("M6 display height", "M6 gyro countdown")
+        this.addDependency("M6 display width", "M6 gyro countdown")
     }
 }
 export default new Settings();

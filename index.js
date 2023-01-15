@@ -8,6 +8,7 @@ import "./features/powder_chest";
 import "./features/readable";
 import "./features/bonzo_mask.js";
 import "./features/mining_cooldown.js";
+import "./features/m6_gyros.js";
 import "./commands.js";
 //Misc
 import "./misc/misc";
