@@ -15,6 +15,8 @@ mkdir EstradiolClient
 cp -r features ./EstradiolClient
 cp -r misc ./EstradiolClient
 cp -r utils ./EstradiolClient
+cp -r commands ./EstradiolClient
+cp -r assets ./EstradiolClient
 
 cp index.js ./EstradiolClient
 cp commands.js ./EstradiolClient
