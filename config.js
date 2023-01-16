@@ -123,7 +123,7 @@ class Settings {
 
     @SwitchProperty({
         name: "M6 gyro countdown",
-        description: "currently only shows fm gyros",
+        description: "shows a count down for when you need to gyro (currently only fm)",
         category: "Dungeons",
         subcategory: "solvers",
     })
