@@ -28,7 +28,11 @@ register("chat", (event) => {
   const umsg = ChatLib.removeFormatting(ChatLib.getChatMessage(event));
   if (umsg.match("Mining Speed Boost is now available!")) {
     Client.showTitle("&dBoost Ready!", "&5Right Click!", 0, 125, 0);
-    World.playSound("random.chestopen", 2, 1);
+    const ready_sound = new Sound({
+      source: "mining-speed-boost-ready.ogg",
+    });
+    ready_sound.setAttenuation(0);
+    ready_sound.play();
   }
 });
 
