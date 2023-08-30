@@ -13,9 +13,7 @@ export function NameHistory(name) {
     ChatLib.chat("&a--------------------");
     ChatLib.chat(`&d${response["usernames"][0]["username"]} &boriginal name`);
     for (let x in response.usernames) {
-      if (x == 0) {
-        //do nothing
-      } else {
+      if (x != 0) {
         let changed_at = response["usernames"][x]["changed_at"].split("T")[0];
         ChatLib.chat(
           `&d${response["usernames"][x]["username"]} &b${changed_at}`,
